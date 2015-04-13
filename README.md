@@ -4,11 +4,15 @@ A scaffold for [Raconteur] projects.
 
 ## Installation
 
-You'll need [Node.js] and [Gulp] installed.
+You'll need [Node.js] installed. You can find an installation package for your OS at their [download page](https://nodejs.org/download/). On Linux, it's very likely that your distribution packages node.js.
 
-    git clone [this repository]
-    cd raconteur-template
-    npm install
+You'll also need [Gulp]. Gulp is installed via npm, node's own package manager:
+
+    npm install --global gulp
+
+You don't have to install gulp globally, but on most OSes and setups this will put the executable `gulp` file somewhere in your system path so you can easily run it anywhere.
+
+Once this is in place, you can download this repository as a zip or tar.gz file, unpack it wherever you like, and use it as a template to start building your game. To get started, `cd` to the directory you unpacked the scaffold in and do `npm install`. This will install Raconteur itself and all of its dependencies as separate libraries, locally inside your project directory.
 
 ## Pieces
 
