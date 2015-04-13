@@ -1,6 +1,6 @@
 # Raconteur Development Template
 
-A scaffold for Raconteur projects.
+A scaffold for [Raconteur] projects.
 
 ## Installation
 
@@ -14,12 +14,13 @@ You'll need [Node.js] and [Gulp] installed.
 
 Raconteur is designed to be used with a toolchain made of several powerful web development tools.
 
-- Node.js
-- npm
-- Gulp
-- Browserify
-- CoffeeScript
-- Less
+- [Node.js]
+- [npm]
+- [Gulp]
+- [Browserify]
+- [CoffeeScript]
+- [Less]
+- Numerous Gulp-related and Node packages; see the package.json file
 
 ## File Structure
 
@@ -50,4 +51,14 @@ Inside the scaffold, you will find:
 
 This scaffold comes prepped for usage with Gulp as a build system, Less for CSS preprocessing, Browserify for bundling JavaScript, and CoffeeScript as a JS transpiler.
 
-Running `gulp` will build your game in the `build/` directory. `gulp serve` will build and then start up a local server with live reload, so you can point your browser. `gulp dist` will make a distribution-ready copy of your game in `dist/`, with minified/gzipped JavaScript and CSS.
+Running `gulp` will build your game in the `build/` directory. `gulp serve` will build and then start up a local server with live reload, so you can point your browser. `gulp dist` will make a distribution-ready copy of your game in `dist/`, with minified JavaScript and CSS. `gulp zip` will make a distribution-ready copy in `dist/` and then make a `dist.zip` file that is ready to be uploaded to [Itch.io] or sent by email.
+
+[Raconteur]: http://github.com/sequitur/raconteur/
+[Node.js]: http://nodejs.org/
+[npm]: http://npmjs.com/
+[Gulp]: http://gulpjs.com/
+[Browserify]: http://browserify.org/
+[CoffeeScript]: http://coffeescript.org/
+[Less]: http://lesscss.org/
+[Itch.io]: http://itch.io/
+
