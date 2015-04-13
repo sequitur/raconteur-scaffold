@@ -292,14 +292,15 @@ a {
     transition: color 0.1s ease-in;
 }
 a.raw {
-    padding-right: 14px;
-    background: transparent url("../img/external_link.png") no-repeat right 4px;
+    // External link
+    border-bottom: 1px dashed @anchor-colour;
 }
 a:hover {
     color: lighten(@anchor-colour, 10%);
 }
 
-img.float_right {
+img {
+    .material_shadow();
     float: right;
     margin: 1.1em 0 1.1em 1.1em;
 }
