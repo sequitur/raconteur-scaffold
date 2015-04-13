@@ -15,6 +15,7 @@ var watchify    = require('watchify'),
     minifyCSS   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
     buffer      = require('vinyl-buffer'),
+    zip         = require('gulp-zip'),
     _           = require('lodash');
 
 var reload = browserSync.reload;
@@ -129,4 +130,10 @@ gulp.task('coffee-dist', function () {
 gulp.task('dist', ['html-dist', 'img-dist', 'less-dist', 'coffee-dist'],
   function () {
     return;
+});
+
+gulp.task('zip', ['dist'], function () {
+  return gulp.src('dist/**')
+    .pipe(zip('dist.zip'))
+    .pipe(gulp.dest('.'));
 });
