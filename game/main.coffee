@@ -73,4 +73,4 @@ undum.game.init = (character, system) ->
 
 # Get the party started when the DOM is ready.
 
-$(-> undum.begin())
+$(undum.begin)
