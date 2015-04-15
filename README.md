@@ -66,3 +66,8 @@ Running `gulp` will build your game in the `build/` directory. `gulp serve` will
 [Less]: http://lesscss.org/
 [Itch.io]: http://itch.io/
 
+## License
+
+Most of the code in this scaffold, Undum, and Raconteur are distributed under the MIT license, which allows you to redistribute or modify the code, even for commercial use, as long as you always package it along with a notice acknowledging the original copyright holders and this license. See LICENSE for legalese.
+
+The example image included with this scaffold (storyteller.jpg) is from the Swiss National Library, GS-GUGE-FREUDENBERGER-C-8, and is in the public domain.

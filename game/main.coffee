@@ -1,3 +1,13 @@
+###
+Raconteur story scaffold, copyright (c) Bruno Dias 2015.
+
+Distributed under the MIT license. See LICENSE for information.
+
+In a finished game file, almost all of this scaffold will have been replaced
+by new content (the new game does not carry "substantial parts" of this code)
+so this copyright notice may be removed and replaced with your own.
+###
+
 # Require the libraries we rely on
 
 situation = require('raconteur')
