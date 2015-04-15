@@ -1,6 +1,6 @@
 # Require the libraries we rely on
 
-situation = require('raconteur/lib/situation.js')
+situation = require('raconteur')
 situation.exportUndum() # Ensures our Undum object is the same as Raconteur's
 $ = require('jquery')
 oneOf = require('raconteur/lib/oneOf.js')
