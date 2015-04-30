@@ -12,7 +12,6 @@ so this copyright notice may be removed and replaced with your own.
 
 situation = require('raconteur')
 undum = require('undum-commonjs')
-$ = require('jquery')
 oneOf = require('raconteur/lib/oneOf.js')
 elements = require('raconteur/lib/elements.js')
 qualities = require('raconteur/lib/qualities.js')
@@ -83,4 +82,4 @@ undum.game.init = (character, system) ->
 
 # Get the party started when the DOM is ready.
 
-$(undum.begin)
+window.onload = undum.begin
