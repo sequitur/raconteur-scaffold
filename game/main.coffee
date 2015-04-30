@@ -11,7 +11,7 @@ so this copyright notice may be removed and replaced with your own.
 # Require the libraries we rely on
 
 situation = require('raconteur')
-situation.exportUndum() # Ensures our Undum object is the same as Raconteur's
+undum = require('undum-commonjs')
 $ = require('jquery')
 oneOf = require('raconteur/lib/oneOf.js')
 elements = require('raconteur/lib/elements.js')

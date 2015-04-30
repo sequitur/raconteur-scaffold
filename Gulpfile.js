@@ -49,6 +49,15 @@ gulp.task('less', function () {
       .pipe(gulp.dest('./build/css'));
 });
 
+/* Bundle libraries */
+
+var undumBundler = browserify({debug: true});
+undumBundler.require('undum-commonjs');
+
+gulp.task('buildUndum', function () {
+  return undumBundler.bundle().pipe(source('undum.js')).pipe(gulp.dest('./build/game'));
+});
+
 /* Generate JavaScript with browser sync. */
 
 var customOpts = {
@@ -59,8 +68,9 @@ var customOpts = {
 
 var opts = _.assign({}, watchify.args, customOpts);
 var bundler = watchify(browserify(opts));
+bundler.external('undum-commonjs');
 
-gulp.task('coffee', bundle); // `gulp coffee` will generate bundle
+gulp.task('coffee', ['buildUndum'], bundle); // `gulp coffee` will generate bundle
 bundler.on('update', bundle); // Re-bundle on dep updates
 bundler.on('log', gutil.log); // Output build logs to terminal
 
@@ -102,6 +112,16 @@ gulp.task('serve', ['build'], function () {
 
 /* Distribution tasks */
 
+var undumDistBundler = browserify();
+undumDistBundler.require('undum-commonjs');
+
+gulp.task('undum-dist', function () {
+  return undumDistBundler.bundle().pipe(source('undum.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/game'));
+});
+
 gulp.task('html-dist', html('./dist'));
 gulp.task('img-dist', img('./dist/img'));
 
@@ -118,11 +138,13 @@ var distBundler = browserify({
   transform: ['coffeeify']
 });
 
-gulp.task('coffee-dist', function () {
+distBundler.external('undum-commonjs');
+
+gulp.task('coffee-dist', ['undum-dist'], function () {
   return distBundler.bundle()
         .pipe(source('bundle.js'))
-        .pipe(buffer())
-        .pipe(uglify())
+        //.pipe(buffer())
+        //.pipe(uglify())
         .on('error', gutil.log)
         .pipe(gulp.dest('./dist/game'));
 });
