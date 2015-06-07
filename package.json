@@ -10,7 +10,7 @@
     "babelify": "^6.0.2",
     "browser-sync": "^2.6.0",
     "browserify": "^9.0.8",
-    "browserify-shim": "^3.8.6",
+    "browserify-shim": "^3.8.8",
     "coffeeify": "^1.0.0",
     "gulp": "^3.8.11",
     "gulp-gzip": "^1.1.0",
