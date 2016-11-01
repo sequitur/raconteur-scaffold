@@ -155,7 +155,7 @@ gulp.task('dist', ['html-dist', 'img-dist', 'less-dist', 'coffee-dist'],
 });
 
 gulp.task('zip', ['dist'], function () {
-  return gulp.src('dist/**')
+  return gulp.src('dist/**', { nodir: true })
     .pipe(zip('dist.zip'))
     .pipe(gulp.dest('.'));
 });
