@@ -55,7 +55,7 @@ Inside the scaffold, you will find:
 
 This scaffold comes prepped for usage with Gulp as a build system, Less for CSS preprocessing, Browserify for bundling JavaScript, and CoffeeScript as a JS transpiler.
 
-Running `gulp` will build your game in the `build/` directory. `gulp serve` will build and then start up a local server with live reload, so you can point your browser. `gulp dist` will make a distribution-ready copy of your game in `dist/`, with minified JavaScript and CSS. `gulp zip` will make a distribution-ready copy in `dist/` and then make a `dist.zip` file that is ready to be uploaded to [Itch.io] or sent by email.
+Running `gulp dist` will build your game in the `build/` directory. `gulp serve` will build and then start up a local server with live reload, so you can point your browser. `gulp dist` will make a distribution-ready copy of your game in `dist/`, with minified JavaScript and CSS. `gulp zip` will make a distribution-ready copy in `dist/` and then make a `dist.zip` file that is ready to be uploaded to [Itch.io] or sent by email.
 
 [Raconteur]: http://github.com/sequitur/raconteur/
 [Node.js]: http://nodejs.org/
